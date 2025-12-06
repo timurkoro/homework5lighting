@@ -2,19 +2,18 @@
 #include "Window.h"
 #include <imgui/imgui.h>
 
-#include "SolarSystemScene.h"
-#include "NeonLightScene.h"
-#include "ReflectivePaintScene.h"
-#include "FractalScene.h"
+//#include "SolarSystemScene.h"
+//#include "NeonLightScene.h"
+//#include "FractalScene.h"
 #include "SkinningScene.h"
 
-#include "GraphicsTestScene.h"
-#include "CollisionTestScene.h"
-#include "PhysicsTestScene.h"
+//#include "GraphicsTestScene.h"
+//#include "CollisionTestScene.h"
+//#include "PhysicsTestScene.h"
 
-#include "RasterizationScene.h"
-#include "RaycastingScene.h"
-#include "EffectScene.h"
+//#include "RasterizationScene.h"
+//#include "RaycastingScene.h"
+//#include "EffectScene.h"
 
 Scene* Scene::sScenes[Scene::COUNT]{};
 Scene::Type Scene::sCurrent = Scene::COUNT;
@@ -22,18 +21,18 @@ bool Scene::sSelect = false;
 
 void Scene::Create(Scene::Type scene)
 {
-	sScenes[SOLAR_SYSTEM] = new SolarSystemScene;
-	sScenes[NEON_LIGHTS] = new NeonLightScene;
-	sScenes[REFLECTIVE_PAINT] = new ReflectivePaintScene;
-	sScenes[FRACTAL] = new FractalScene;
+	//sScenes[SOLAR_SYSTEM] = new SolarSystemScene;
+	//sScenes[NEON_LIGHTS] = new NeonLightScene;
+	//sScenes[REFLECTIVE_PAINT] = new ReflectivePaintScene;
+	//sScenes[FRACTAL] = new FractalScene;
 
-	sScenes[GRAPHICS_TEST] = new GraphicsTestScene;
-	sScenes[PHYSICS_TEST] = new PhysicsTestScene;
-	sScenes[COLLISION_TEST] = new CollisionTestScene;
+	//sScenes[GRAPHICS_TEST] = new GraphicsTestScene;
+	//sScenes[PHYSICS_TEST] = new PhysicsTestScene;
+	//sScenes[COLLISION_TEST] = new CollisionTestScene;
 
-	sScenes[CPU_RASTERIZATION] = new RasterizationScene;
-	sScenes[CPU_RAYCASTING] = new RaycastingScene;
-	sScenes[CPU_EFFECT] = new EffectScene;
+	//sScenes[CPU_RASTERIZATION] = new RasterizationScene;
+	//sScenes[CPU_RAYCASTING] = new RaycastingScene;
+	//sScenes[CPU_EFFECT] = new EffectScene;
 
 	sScenes[SKINNING] = new SkinningScene;
 
@@ -91,19 +90,19 @@ void Scene::DrawImGui()
 	{
 		static const char* sceneNames[] =
 		{
-			"Solar System",
-			"Neon Lights",
-			"Reflective Paint",
-			"Fractals",
+			//"Solar System",
+			//"Neon Lights",
+			//"Reflective Paint",
+			//"Fractals",
 			"Skinning",
 
-			"Graphics Test",
-			"Physics Test",
-			"Collision Test",
+			//"Graphics Test",
+			//"Physics Test",
+			//"Collision Test",
 
-			"CPU Rasterization",
-			"CPU Raycasting",
-			"CPU Effect"
+			//"CPU Rasterization",
+			//"CPU Raycasting",
+			//"CPU Effect"
 		};
 
 		int scene = Current();

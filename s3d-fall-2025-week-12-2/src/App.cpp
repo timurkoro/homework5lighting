@@ -33,7 +33,7 @@ void Init()
 	CreateMeshes();
 	InitRenderer();
 	InitSoftwareRenderer();
-	Scene::Create(Scene::CPU_RASTERIZATION);
+	Scene::Create(Scene::SKINNING);
 }
 
 void Quit()

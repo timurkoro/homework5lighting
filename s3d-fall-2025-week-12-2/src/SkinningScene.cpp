@@ -25,10 +25,8 @@ static float fFov = PI * 0.5f;
 static float fNear = 0.1f;
 static float fFar = 500.0f;
 
-static float planetRadii[PLANET_COUNT];			// Raymarch only
 static Vector3 planetColors[PLANET_COUNT];		// Both
 static Matrix planetWorld[PLANET_COUNT];		// Rasterization world matrix
-static Matrix planetWorldInv[PLANET_COUNT];		// Raymarching world matrix
 static Matrix planetNormal[PLANET_COUNT];		// Raster only
 static Matrix planetMvp[PLANET_COUNT];			// Raster only
 
@@ -38,7 +36,6 @@ static Texture2D fDepthRT;
 
 
 void DrawPlanetsRaster();
-void DrawPlanetsRaymarch();
 
 
 void SkinningScene::OnLoad()
@@ -122,7 +119,6 @@ void SkinningScene::OnLoad()
 
 	for (int i = 0; i < PLANET_COUNT; i++)
 	{
-		planetRadii[i] = planets[i].radius;
 		planetColors[i] = planets[i].color;
 	}
 }
@@ -154,7 +150,6 @@ void SkinningScene::OnUpdate(float dt)
 		Matrix translation = Translate(planet.position);
 
 		planetWorld[i] = scale * rotationSelf * translation * rotationOrbit;
-		planetWorldInv[i] = Invert(rotationSelf * translation * rotationOrbit);
 		planetNormal[i] = NormalMatrix(planetWorld[i]);
 		planetMvp[i] = planetWorld[i] * gView * gProj;
 	}
@@ -169,8 +164,6 @@ void SkinningScene::OnDraw()
 
 	if (fRaster)
 		DrawPlanetsRaster();
-	else
-		DrawPlanetsRaymarch();
 
 	UnbindFramebuffer(fFbo);
 	if (fDepth)
@@ -196,28 +189,4 @@ void DrawPlanetsRaster()
 	UnbindShader();
 
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-}
-
-void DrawPlanetsRaymarch()
-{
-	Vector2 resolution{ SCREEN_WIDTH, SCREEN_HEIGHT };
-	Matrix cameraRotation = FpsRotation(gCamera);
-	BindShader(&gShaderPlanetsRaymarch);
-
-	// Raymarching data
-	SendVec3("u_camPos", gCamera.position);
-	SendMat3("u_camRot", cameraRotation);
-	SendVec2("u_resolution", resolution);
-	SendFloat("u_fov", tanf(fFov * 0.5f));
-	SendFloat("u_near", fNear);
-	SendFloat("u_far", fFar);
-
-	// Planet data
-	SendMat4Array("u_planetMatrices", planetWorldInv, PLANET_COUNT);
-	SendVec3Array("u_planetColors", planetColors, PLANET_COUNT);
-	SendFloatArray("u_planetRadii", planetRadii, PLANET_COUNT);
-	SendVec3("u_sunPos", planets[0].position);
-
-	DrawFsq(&gPipelineDefault);
-	UnbindShader();
 }
