@@ -126,6 +126,12 @@ void DestroyMesh(Mesh* mesh)
 void GenMeshObj(Mesh* mesh, const char* path)
 {
 	fastObjMesh* obj = fast_obj_read(path);
+
+	if (obj == nullptr)
+	{
+		return;
+	}
+
 	const int count = obj->index_count;
 
 	assert(obj->position_count > 1);
