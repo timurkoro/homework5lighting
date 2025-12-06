@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{f1d8d1cd-e293-41ef-a0fa-588aefea4086}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{13b03527-9a02-4d34-ae4c-c01c1d0b83ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application">
+      <UniqueIdentifier>{6b7b7356-31ca-40ce-85ed-83debd241aa1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Image">
+      <UniqueIdentifier>{25b4432d-e11a-411a-a957-2e528818b3dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entry Point">
+      <UniqueIdentifier>{de232c74-1d21-407f-af99-86c041e39d91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pipeline">
+      <UniqueIdentifier>{96f3395a-6337-4b58-8ba3-be4d96d30f3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lighting">
+      <UniqueIdentifier>{1a24491b-72bb-4f8e-b84a-b6856fdfffad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render">
+      <UniqueIdentifier>{b13a314b-0975-4b45-8644-d4719818a80b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{b0e46dae-414f-45fd-84f8-404b36b9e57c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{fc55ab78-2fe8-44f1-a715-0a92e1da5fff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grid">
+      <UniqueIdentifier>{6714d9ae-1a79-4288-931c-25e0daa3cb75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Software Rendering Scenes">
+      <UniqueIdentifier>{3c93e6b1-5a67-4397-b124-d6b492656910}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Test Scenes">
+      <UniqueIdentifier>{dad09388-803d-45cc-a8bd-75806982417f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Demo Scenes">
+      <UniqueIdentifier>{12600fb5-656c-4d6e-82ad-124a41988f39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Unfinished Scenes">
+      <UniqueIdentifier>{4c9e8e8c-a472-4f8a-bda1-2df592c5d8f3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="inc\imgui\imgui.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="inc\imgui\imgui_demo.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="inc\imgui\imgui_draw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="inc\imgui\imgui_impl_glfw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="inc\imgui\imgui_impl_opengl3.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="inc\imgui\imgui_tables.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="inc\imgui\imgui_widgets.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Window.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Image.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="src\glad.c">
+      <Filter>Entry Point</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Entry Point</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Materials.cpp">
+      <Filter>Lighting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Render.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PipelineState.cpp">
+      <Filter>Pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Camera.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Framebuffer.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImageLoader.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Shader.cpp">
+      <Filter>Assets</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Mesh.cpp">
+      <Filter>Assets</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Texture.cpp">
+      <Filter>Assets</Filter>
+    </ClCompile>
+    <ClCompile Include="src\File.cpp">
+      <Filter>Assets</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HexagonGrid.cpp">
+      <Filter>Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EffectScene.cpp">
+      <Filter>Scene\Software Rendering Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RasterizationScene.cpp">
+      <Filter>Scene\Software Rendering Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RaycastingScene.cpp">
+      <Filter>Scene\Software Rendering Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SoftwareRenderingScene.cpp">
+      <Filter>Scene\Software Rendering Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GraphicsTestScene.cpp">
+      <Filter>Scene\Test Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NeonLightScene.cpp">
+      <Filter>Scene\Demo Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SolarSystemScene.cpp">
+      <Filter>Scene\Demo Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ReflectivePaintScene.cpp">
+      <Filter>Scene\Demo Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FractalScene.cpp">
+      <Filter>Scene\Demo Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CollisionTestScene.cpp">
+      <Filter>Scene\Test Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PhysicsTestScene.cpp">
+      <Filter>Scene\Test Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SkinningScene.cpp">
+      <Filter>Scene\Unfinished Scenes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="inc\imgui\imconfig.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\imgui\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\imgui\imgui_impl_glfw.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\imgui\imgui_impl_opengl3.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\imgui\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\imgui\imstb_rectpack.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\imgui\imstb_textedit.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\imgui\imstb_truetype.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\imgui\imgui_impl_opengl3_loader.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Scene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\App.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Config.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Window.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Image.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Lights.h">
+      <Filter>Lighting</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Materials.h">
+      <Filter>Lighting</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rasterization.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ImageUtils.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Color.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Log.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Render.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Time.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Math.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Collision.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Timer.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PipelineState.h">
+      <Filter>Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Camera.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Geometry.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Physics.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ImageLoader.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shader.h">
+      <Filter>Assets</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Mesh.h">
+      <Filter>Assets</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Texture.h">
+      <Filter>Assets</Filter>
+    </ClInclude>
+    <ClInclude Include="src\File.h">
+      <Filter>Assets</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Framebuffer.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HexagonGrid.h">
+      <Filter>Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EffectScene.h">
+      <Filter>Scene\Software Rendering Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RasterizationScene.h">
+      <Filter>Scene\Software Rendering Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RaycastingScene.h">
+      <Filter>Scene\Software Rendering Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SoftwareRenderingScene.h">
+      <Filter>Scene\Software Rendering Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GraphicsTestScene.h">
+      <Filter>Scene\Test Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NeonLightScene.h">
+      <Filter>Scene\Demo Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SolarSystemScene.h">
+      <Filter>Scene\Demo Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ReflectivePaintScene.h">
+      <Filter>Scene\Demo Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FractalScene.h">
+      <Filter>Scene\Demo Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PhysicsTestScene.h">
+      <Filter>Scene\Test Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CollisionTestScene.h">
+      <Filter>Scene\Test Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SkinningScene.h">
+      <Filter>Scene\Unfinished Scenes</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
